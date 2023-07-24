@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: myapp
   namespace: argocd
+  annotations:
+    notifications.argoproj.io/subscribe.on-sync-succeeded.gmail: gihangt@gmail.com
 spec:
   project: default
 

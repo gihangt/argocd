@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: email-config
+  name: email-template
 data:
   template.app-sync-succeeded: |
     email:

@@ -1,8 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
-# This is for the email notification
 metadata:
-  name: email-config
+  name: argocd-notifications-cm
 data:
   service.email.gmail: |
     username: fmsreadonly@gmail.com
@@ -10,4 +9,3 @@ data:
     host: smtp.gmail.com
     port: 464
     from: readonly@fms.com
-

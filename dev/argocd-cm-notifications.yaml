@@ -5,7 +5,7 @@ metadata:
 data:
   service.email.gmail: |
     username: fmsreadonly@gmail.com
-    password: usfhxqhpiccbwgbl
+    password: xxxxxxxxxx
     host: smtp.gmail.com
     port: 464
     from: readonly@fms.com

@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myapp4
+  namespace: argocd
+  annotations:
+    notifications.argoproj.io/subscribe.on-sync-succeeded.gmail: gihangt@gmail.com
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/gihangt/argocd.git
+    targetRevision: HEAD
+    path: dev
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: myapp4
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+
+    automated:
+      prune: true
+      selfHeal: true
